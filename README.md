@@ -1,17 +1,30 @@
-# Low Health Behavior for FiveM
+Sure, here's a README description for the provided code:
 
-This script implements an injured animation and disables running when the player's health drops below a certain threshold on your FiveM server.
+---
 
-## Installation
+# Health Check & Screen Effect Script for FiveM
 
-1. Download the script and extract the file into your resources directory.
-2. Add `start your_script` to your `server.cfg`.
-3. Restart your server.
+## Overview
 
-## Functionality
+This is a Lua script for FiveM, a framework for building multiplayer games based on Rockstar's Grand Theft Auto V. The script continuously checks the player's health and applies certain effects when the player is hurt.
 
-The script checks the player's health every second. If the health is at or below 129, the injured animation is implemented and the ability to run is disabled. If the player's health goes back above 130, the normal animation is restored and running is re-enabled.
+## Features
 
-## Support
+1. **Health check**: The script constantly checks the player's health. When the player's health drops to 130 or below, the player is considered "hurt".
+2. **Injury animation**: If the player's health drops to 130 or below, an injury animation is activated, which changes the player's movement style. This effect is reset when the player's health rises above 130.
+3. **Control disable**: When the player is "hurt", certain controls, specifically running (control 21) and jumping (control 22), are disabled.
+4. **Screen effect**: In addition to the injury animation, a screen effect called "BeastLaunch" is triggered when the player's health drops to 110 or below. This effect stops when the player's health rises above 110.
 
-If you encounter any issues with this script, please open an issue on this project's GitHub page.
+## Usage
+
+1. Add this script to your FiveM server resources.
+2. Add the resource name to your server configuration's `start` list to ensure the script runs when the server starts.
+3. Players in your server should now experience the injury animation and screen effect when their health falls below the specified thresholds.
+
+## Customization
+
+You can customize the health thresholds, the screen effect, and the disabled controls according to your needs. These are defined at the top of the script. Be sure to refer to FiveM's native function documentation for the correct control IDs and screen effect names.
+
+---
+
+Remember to replace the necessary parts like the script's name and the resource name based on your actual script.
